@@ -7,8 +7,8 @@ document.getElementById("search").onclick = function(){
 
     showInformation();
     showResults()
-    showEstimate()
     showSMS();
+    //showEstimate()
 }
 
 function showInformation(){
@@ -21,26 +21,26 @@ function showResults(){
     document.getElementById("results").innerHTML ="<br><h2>YOUR MAPLE TAP INFORMATION</h2><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>START DATE: Calculating<br>END DATE: Calculating<br>IDEAL TAP DATE: Calculating</h3>"
 }
 
-// function showEstimate() {
-//     if(document.getElementById("yield").checked){
-//         document.getElementById("results").innerHTML ="<br><h2>YOUR MAPLE TAP INFORMATION</h2><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>START DATE: Feb 22nd 2026<br>END DATE: Mar. 1st 2026<br>IDEAL TAP DATE: Feb 29th 2026<br>"
-//     } else{
-//         console.log('ugh')
+function showEstimate() {
+    if(document.getElementById("yield").checked){
+        document.getElementById("results").innerHTML ="<br><h2>YOUR MAPLE TAP INFORMATION</h2><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>START DATE: Feb 22nd 2026<br>END DATE: Mar. 1st 2026<br>IDEAL TAP DATE: Feb 29th 2026<br>"
+    } else{
+        console.log('ugh')
 
-//     }
-// }
+    }
+}
 
 
 function showSMS(){
     console.log("I am tired")
-    // document.getElementById("sms").innerHTML ="<br><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>Want to review SMS updates? Enter your phone number</h3><input type='text' id='trees' name ='trees' placeholder='###-###-####' style = 'font-family: Poppins; font-size: 16px;' size= '40;'><br><br> <button type='submit' id = 'numberSubmit' style='font-family: Poppins; font-size: 18px;'>Enter</button>"
+    document.getElementById("sms").innerHTML ="<br><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>Want to review SMS updates? Enter your phone number</h3><input type='text' id='trees' name ='trees' placeholder='###-###-####' style = 'font-family: Poppins; font-size: 16px;' size= '40;'><br><br> <button type='submit' id = 'numberSubmit' style='font-family: Poppins; font-size: 18px;'>Enter</button>"
+    
+    document.getElementById("numberSubmit").onclick = function(){
+        textLocation = document.getElementById("numberSubmit").value;
+        console.log(textLocation);
+    }
 }
 
-// document.getElementById("numberSubmit").onclick = function(){
-//     textLocation = document.getElementById("numberSubmit").value;
-//     console.log(valueNumber);
-// }
-
-// function hideNumber(){
-//     document.getElementById("sms").innerHTML ="<br><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>Number accepted! <br> 'valueNumber'</h3>"
-// }
+function hideNumber(){
+    document.getElementById("sms").innerHTML ="<br><h3 style='margin-right:20%; margin-left: 20%;color: #0C0C0C;'>Number accepted! <br> 'valueNumber'</h3>"
+}

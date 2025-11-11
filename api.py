@@ -77,8 +77,6 @@ async def get_freeze_thaw_data(request: Request):
 
     print(data)
 
-    modis_df_final = pd.DataFrame(data)
-    print(modis_df_final.head(10))
     try:
         return JSONResponse(content=data)
     except Exception as e:
